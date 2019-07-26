@@ -70,6 +70,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -132,6 +134,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907260800072_dryHobi.v1.cs" />
+    <Compile Include="Migrations\201907260800072_dryHobi.v1.Designer.cs">
+      <DependentUpon>201907260800072_dryHobi.v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DryHobiEntities.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\_oldDbClass\Adress.cs" />
+    <Compile Include="Models\_oldDbClass\Category.cs" />
+    <Compile Include="Models\_oldDbClass\Customer.cs" />
+    <Compile Include="Models\_oldDbClass\Order.cs" />
+    <Compile Include="Models\_oldDbClass\OrderDetail.cs" />
+    <Compile Include="Models\_oldDbClass\OrderState.cs" />
+    <Compile Include="Models\_oldDbClass\Photo.cs" />
+    <Compile Include="Models\_oldDbClass\Product.cs" />
+    <Compile Include="Models\_oldDbClass\Shipper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -214,7 +233,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
@@ -227,7 +245,9 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\index.d.ts" />
+    <EmbeddedResource Include="Migrations\201907260800072_dryHobi.v1.resx">
+      <DependentUpon>201907260800072_dryHobi.v1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
